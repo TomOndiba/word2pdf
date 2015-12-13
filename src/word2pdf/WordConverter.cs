@@ -40,10 +40,12 @@ namespace WordToPdf
         documents = application.Documents;
 
         object filePathName = wordFilePathName;
+        object ReadOnly = true;
+        object Visible = false;
         document = (MSWord.DocumentClass)documents.Open(
-            ref filePathName, ref missing, true, ref missing, ref missing
+            ref filePathName, ref missing, ref ReadOnly, ref missing, ref missing
             , ref missing, ref missing, ref missing, ref missing, ref missing
-            , ref missing, ref missing, ref missing, ref missing, ref missing, ref missing);
+            , ref missing, ref Visible, ref missing, ref missing, ref missing, ref missing);
 
         // ExportAsFixedFormatのパラメータは以下を参照
         // http://msdn.microsoft.com/ja-jp/library/microsoft.office.tools.word.document.exportasfixedformat.aspx
