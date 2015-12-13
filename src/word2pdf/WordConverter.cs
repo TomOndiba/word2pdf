@@ -41,7 +41,7 @@ namespace WordToPdf
 
         object filePathName = wordFilePathName;
         document = (MSWord.DocumentClass)documents.Open(
-            ref filePathName, ref missing, ref missing, ref missing, ref missing
+            ref filePathName, ref missing, true, ref missing, ref missing
             , ref missing, ref missing, ref missing, ref missing, ref missing
             , ref missing, ref missing, ref missing, ref missing, ref missing, ref missing);
 
